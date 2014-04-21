@@ -1,0 +1,16 @@
+<div style="float: right"><a href="/#productCreate">Create new</a> </div>
+
+<h3>Filter</h3>
+<input type="text" ng-model="filterProduct" />
+
+<div ng-repeat="product in products | filter:filterProduct" style="border-bottom: solid 1px #d3d3d3; margin:2%; padding: 3%">
+    <h4>{{product.Name}}</h4>
+    <p style="font-size: small; color: #808080;">
+        {{product.Description}}
+    </p>
+    <a href="/#products/{{product.Id}}">
+        Detail
+    </a> &nbsp;
+    <a href="/#productEdit/{{product.Id}}">Edit</a>
+    <button class="link" ng-click="delete(product.Id)">Delete</button>
+</div>
