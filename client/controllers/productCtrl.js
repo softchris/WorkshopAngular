@@ -1,7 +1,9 @@
 var controllers = angular.module('controllers');
 
 controllers.controller('productCtrl',function($scope, productSrv, $routeParams, $location){
-    $scope.products = productSrv.getProducts();
+    productSrv.getProducts().then(function(result){
+        $scope.products = result.data;
+    });
 
     if ($routeParams.id !== undefined){
         $scope.product = productSrv.getProduct($routeParams.id);
@@ -13,6 +15,10 @@ controllers.controller('productCtrl',function($scope, productSrv, $routeParams, 
     };
 
     $scope.delete = function(id){
-        productSrv.delete(id);
+        productSrv.delete(id).then(function(result){
+            productSrv.getProducts().then(function(result){
+                $scope.products = result.data;
+            });
+        })
     }
 });

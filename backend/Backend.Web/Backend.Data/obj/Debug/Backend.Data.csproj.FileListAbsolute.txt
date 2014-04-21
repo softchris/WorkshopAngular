@@ -1,0 +1,12 @@
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\obj\Debug\Backend.Data.csprojResolveAssemblyReference.cache
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\Backend.Data.dll.config
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\Backend.Data.dll
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\Backend.Data.pdb
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\Backend.Domain.dll
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\EntityFramework.dll
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\Backend.Domain.pdb
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\EntityFramework.xml
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\obj\Debug\Backend.Data.dll
+C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Data\obj\Debug\Backend.Data.pdb

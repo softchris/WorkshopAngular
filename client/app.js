@@ -24,7 +24,7 @@ var routes =
         'productCreate' : {
             'route' : '/productCreate',
             'templateUrl' : 'partials/products/create.html',
-            'controller': 'productCtrl'
+            'controller': 'productCreateCtrl'
         },
         'productsAll' : {
             'route' : '/products',
