@@ -7,23 +7,20 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['client/services/*.js', 'client/controllers/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['client/app.js', 'client/services/*.js', 'client/controllers/*.js'],
+        dest: 'dist/app.js'
       }
     },
     ngmin:{
       a:{
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.js'
+        src: 'dist/app.js',
+        dest: 'dist/app.js'
       }
     },
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'dist/app.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -49,7 +46,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          'dist/output.css': ['client/css/*.css']
+          'dist/styles.css': ['client/css/*.css']
         }
       }
     },
@@ -57,10 +54,21 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'src',
+          cwd: 'client',
           src: ['**/*.{png,jpg,gif}'],
           dest: 'dist/'
         }]
+      }
+    },
+    pngmin: {
+      compile: {
+        options: {},
+        files: [
+          {
+            src: 'client/img/*.png',
+            dest: 'dest/img'
+          }
+        ]
       }
     }
   });
@@ -73,9 +81,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-pngmin');
 
   grunt.registerTask('test', ['jshint', 'qunit']);
 
-  grunt.registerTask('default', ['jshint', 'concat', 'cssmin', 'ngmin', 'uglify', "imagemin"]);
-
+  grunt.registerTask('default', ['jshint', 'concat', 'cssmin', 'ngmin', 'uglify', 'imagemin', 'pngmin']);
 };
