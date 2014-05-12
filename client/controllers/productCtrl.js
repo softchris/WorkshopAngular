@@ -19,6 +19,6 @@ controllers.controller('productCtrl',function($scope, productSrv, $routeParams, 
             productSrv.getProducts().then(function(result){
                 $scope.products = result.data;
             });
-        })
-    }
+        });
+    };
 });
