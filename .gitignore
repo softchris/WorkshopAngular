@@ -66,3 +66,7 @@ packages/
 
 #Test files
 *.testsettings
+
+#Angular
+dist/
+node_modules/
