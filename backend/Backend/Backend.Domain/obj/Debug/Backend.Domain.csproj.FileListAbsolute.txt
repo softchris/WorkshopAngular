@@ -1,5 +1,0 @@
-C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Domain\bin\Debug\Backend.Domain.dll
-C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Domain\bin\Debug\Backend.Domain.pdb
-C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Domain\obj\Debug\Backend.Domain.csprojResolveAssemblyReference.cache
-C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Domain\obj\Debug\Backend.Domain.dll
-C:\Dev\WorkshopAngular\WorkshopAngular\backend\Backend.Web\Backend.Domain\obj\Debug\Backend.Domain.pdb
