@@ -1,6 +1,9 @@
 var services = angular.module('services');
 services.factory('productSrv',function($http, appSrv){
    return {
+     getFullText : function(product){
+        return product.Name + " " + product.Description;
+     },
      getProducts : function(){
          return $http.get(appSrv.domain+ 'Products');
      },
