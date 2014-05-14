@@ -2,17 +2,19 @@
   "name": "angularWs",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^0.4.4",
+    "grunt": "^0.4.1",
     "grunt-contrib-concat": "",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.3.3",
     "grunt-contrib-qunit": "",
     "grunt-contrib-uglify": "",
     "grunt-contrib-watch": "",
-    "grunt-ngmin": "",
+    "grunt-ngmin": "",g"grunt-karma-jasmine" : "",t 
     "grunt-contrib-cssmin" : "",
     "grunt-contrib-imagemin" : "",
     "grunt-pngmin" : "",
-    "grunt-contrib-jasmine" : ""
+    "grunt-karma" : "",
+    "grunt-karma-jasmine" : "",
+    "karma-phantomjs-launcher" : ""
   }
 }

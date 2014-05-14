@@ -69,21 +69,34 @@ module.exports = function(grunt) {
             dest: 'dest/img'
           }
         ]
-      },
-    },
-    jasmine: {
-      pivotal: {
-        src: ['client/lib/*.js',
-              'client/app.js',
-              'client/controllers/**/*.js',
-              'client/services/**/*.js'],
-        options: {
-          specs: 'client/test/services/*.js',
-          vendor: 'client/lib/*.js',
-          helpers: 'client/test/*Helper.js'
-        }
       }
-    }
+    },
+    karma:{
+          unit: {
+            background: false,
+            options: {
+                files:[
+                    "client/lib/angular.js",
+                    "client/lib/angular-mocks.js",
+                    "client/app.js",
+                    "client/services/*.js",
+                    "client/controllers/*.js",
+                    "client/test/services/*.js"
+                ],
+                plugins:[
+                    "karma-jasmine",
+                    "karma-phantomjs-launcher"
+                ],
+                frameworks:[
+                    "jasmine"
+                ],
+                browsers:[
+                    "PhantomJS"
+                ]
+            }
+          }
+      }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -95,9 +108,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-pngmin');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('test', ['jshint', 'qunit', 'jasmine']);
+  grunt.registerTask('test', ['jshint', 'karma:unit']);
 
-  grunt.registerTask('default', ['jasmine', 'jshint', 'concat', 'cssmin', 'ngmin', 'uglify', 'imagemin', 'pngmin']);
+  grunt.registerTask('default', ['karma:unit', 'jshint', 'concat', 'cssmin', 'ngmin', 'uglify', 'imagemin', 'pngmin']);
 };
