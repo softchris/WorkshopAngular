@@ -4,6 +4,11 @@ angular.module('controllers',[]);
 
 var routes =
     {
+        'cart' : {
+            'route' : '/cart',
+            'templateUrl' : 'partials/cart/all.html',
+            'controller': 'cartCtrl'
+        },
         'start' : {
             'route' : '/start',
             'templateUrl' : 'partials/start/start.html',
