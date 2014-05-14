@@ -12,6 +12,7 @@
     "grunt-ngmin": "",
     "grunt-contrib-cssmin" : "",
     "grunt-contrib-imagemin" : "",
-    "grunt-pngmin" : ""
+    "grunt-pngmin" : "",
+    "grunt-contrib-jasmine" : ""
   }
 }
