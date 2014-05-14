@@ -69,6 +69,19 @@ module.exports = function(grunt) {
             dest: 'dest/img'
           }
         ]
+      },
+    },
+    jasmine: {
+      pivotal: {
+        src: ['client/lib/*.js',
+              'client/app.js',
+              'client/controllers/**/*.js',
+              'client/services/**/*.js'],
+        options: {
+          specs: 'client/test/services/*.js',
+          vendor: 'client/lib/*.js',
+          helpers: 'client/test/*Helper.js'
+        }
       }
     }
   });
@@ -82,8 +95,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-pngmin');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-  grunt.registerTask('test', ['jshint', 'qunit']);
+  grunt.registerTask('test', ['jshint', 'qunit', 'jasmine']);
 
-  grunt.registerTask('default', ['jshint', 'concat', 'cssmin', 'ngmin', 'uglify', 'imagemin', 'pngmin']);
+  grunt.registerTask('default', ['jasmine', 'jshint', 'concat', 'cssmin', 'ngmin', 'uglify', 'imagemin', 'pngmin']);
 };
