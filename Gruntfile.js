@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         files: [
           {
             src: 'client/img/*.png',
-            dest: 'dest/img'
+            dest: 'dist/img'
           }
         ]
       }
@@ -74,6 +74,7 @@ module.exports = function(grunt) {
     karma:{
           unit: {
             background: false,
+            captureTimeout: 5000,
             options: {
                 files:[
                     "client/lib/angular.js",
@@ -82,7 +83,7 @@ module.exports = function(grunt) {
                     "client/services/*.js",
                     "client/controllers/*.js",
                     "client/test/services/*.js",
-					"client/test/controllers/*.js"
+					          "client/test/controllers/*.js"
                 ],
                 plugins:[
                     "karma-jasmine",
@@ -97,7 +98,6 @@ module.exports = function(grunt) {
             }
           }
       }
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
