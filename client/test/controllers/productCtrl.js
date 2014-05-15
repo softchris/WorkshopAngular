@@ -24,7 +24,7 @@ describe('given product controller',function(){
 
 
         scope = $rootScope.$new();
-        mockHttp.expectGET('http://localhost:53666/api/Products')
+        mockHttp.expectGET('http://angularworkshop.azurewebsites.net/api/Products')
             .respond(
                 [
                     {Name : "p1",Description:"d1"},

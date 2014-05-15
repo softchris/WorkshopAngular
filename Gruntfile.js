@@ -81,7 +81,8 @@ module.exports = function(grunt) {
                     "client/app.js",
                     "client/services/*.js",
                     "client/controllers/*.js",
-                    "client/test/services/*.js"
+                    "client/test/services/*.js",
+					"client/test/controllers/*.js"
                 ],
                 plugins:[
                     "karma-jasmine",

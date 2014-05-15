@@ -14,7 +14,7 @@
     "grunt-contrib-imagemin" : "",
     "grunt-pngmin" : "",
     "grunt-karma" : "",
-    "grunt-karma-jasmine" : "",
+    "karma-jasmine" : "",
     "karma-phantomjs-launcher" : ""
   }
 }
