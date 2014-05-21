@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Workshop Demo
+        </title>
+        <link rel="stylesheet" type="text/css" href="/app/css/bootstrap.css" />
+    </head>
+    <body ng-app="app">
+        <div class="navbar ">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li>
+                            <a href="/app/#products">Products</a>
+                        </li>
+                        <li>
+                            <a href="/app/#start">Start</a>
+                        </li>
+                        <li>
+                            <a href="/app/#cart">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div ng-view style="margin: 3%">
+
+        </div>
+
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-route.js"></script>
+
+        <script src="app.js"></script>
+        <script src="controllers/productCtrl.js"></script>
+        <script src="controllers/startCtrl.js"></script>
+        <script src="controllers/productEditCtrl.js"></script>
+        <script src="controllers/productCreateCtrl.js"></script>
+        <script src="controllers/cartCtrl.js"></script>
+
+        <script src="services/productSrv.js"></script>
+        <script src="services/appSrv.js"></script>
+    </body>
+
+</html>

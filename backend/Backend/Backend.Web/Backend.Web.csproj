@@ -124,6 +124,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\test\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\controllers\cartCtrl.js" />
+    <Content Include="App\controllers\productCreateCtrl.js" />
+    <Content Include="App\controllers\productCtrl.js" />
+    <Content Include="App\controllers\productEditCtrl.js" />
+    <Content Include="App\controllers\startCtrl.js" />
+    <Content Include="App\css\bootstrap.css" />
+    <Content Include="App\index.html" />
+    <Content Include="App\lib\angular-mocks.js" />
+    <Content Include="App\lib\angular-route.js" />
+    <Content Include="App\lib\angular.js" />
+    <Content Include="App\partials\cart\all.html" />
+    <Content Include="App\partials\products\all.html" />
+    <Content Include="App\partials\products\create.html" />
+    <Content Include="App\partials\products\detail.html" />
+    <Content Include="App\partials\products\edit.html" />
+    <Content Include="App\partials\start\start.html" />
+    <Content Include="App\services\appSrv.js" />
+    <Content Include="App\services\productSrv.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -175,6 +195,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App\img\.placeholder" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
