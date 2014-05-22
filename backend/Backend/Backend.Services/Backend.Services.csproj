@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Contracts\ICustomerService.cs" />
     <Compile Include="Contracts\IProductService.cs" />
     <Compile Include="Contracts\IService.cs" />
+    <Compile Include="Impl\CustomerService.cs" />
     <Compile Include="Impl\ProductService.cs" />
     <Compile Include="Impl\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

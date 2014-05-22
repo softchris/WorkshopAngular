@@ -14,6 +14,9 @@ namespace Backend.Web.App_Start
         {
             Mapper.CreateMap<Product, ProductModel>();
             Mapper.CreateMap<ProductModel, Product>();
+
+            Mapper.CreateMap<Customer, CustomerModel>();
+            Mapper.CreateMap<CustomerModel, Customer>();
         }
     }
 }
