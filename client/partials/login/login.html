@@ -1,0 +1,14 @@
+<form ng-submit="login()" style="display: inline-block;
+    text-align: center;">
+    <p>
+        <label for="user">Användare</label>
+        <input class="form-control" required ng-model="user" id="user">
+    </p>
+
+    <p>
+        <label for="password">Lösenord</label>
+        <input class="form-control" required type="password" ng-model="password" id="password">
+    </p>
+
+    <input type="submit" value="Logga in" class="btn" />
+</form>

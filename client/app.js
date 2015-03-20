@@ -35,6 +35,34 @@ var routes =
             'route' : '/products',
             'templateUrl' : 'partials/products/all.html',
             'controller': 'productCtrl'
+        },
+
+        'productDetail' : {
+            'name' : 'productDetail',
+            'route' : '/products/:id',
+            'templateUrl' : 'partials/products/detail.html',
+            'controller': 'productCtrl'
+        },
+        'customersAll' : {
+            'route' : '/customers',
+            'templateUrl' : 'partials/customers/all.html',
+            'controller': 'customerCtrl'
+        },
+
+        'login' : {
+            'route' : '/login',
+            'templateUrl' : 'partials/login/login.html',
+            'controller': 'loginCtrl'
+        },
+        'bookings' : {
+            'route' : '/bookings',
+            'templateUrl' : 'partials/booking/all.html',
+            'controller': 'bookingCtrl'
+        },
+        'createBooking' : {
+            'route' : '/createBooking',
+            'templateUrl' : 'partials/booking/create.html',
+            'controller': 'createBookingCtrl'
         }
 
     };
@@ -53,7 +81,7 @@ app.config(['$routeProvider',
                 });
 
             $routeProvider.otherwise({
-                redirectTo: routes.start.templateUrl
+                redirectTo: routes.login.route
             });
 
         }

@@ -9,5 +9,6 @@ namespace Backend.Services.Contracts
 {
     public interface IProductService : IService<Product>
     {
+        IEnumerable<Product> GetEagerProducts();
     }
 }

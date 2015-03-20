@@ -1,4 +1,5 @@
-var controllers = angular.module('controllers');
+var controllers = controllers || angular.module('controllers');
+
 controllers.controller('cartCtrl',function($scope){
    $scope.cart = [
        { Name: "Banana", Price: 10, Quantity: 1  },

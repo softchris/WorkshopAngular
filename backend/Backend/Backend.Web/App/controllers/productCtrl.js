@@ -10,7 +10,9 @@ controllers.controller('productCtrl',function($scope, productSrv, $routeParams, 
     $scope.init();
 
     if ($routeParams.id !== undefined){
-        $scope.product = productSrv.getProduct($routeParams.id);
+        productSrv.getProduct($routeParams.id).then(function (result) {
+            $scope.product = result.data;
+        });
     }
 
     $scope.create = function(){

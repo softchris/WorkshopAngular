@@ -5,10 +5,9 @@ using System.Web;
 
 namespace Backend.Web.Models
 {
-    public class ProductModel
+    public class ProductTypeModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ProductTypeModel ProductType { get; set; }
     }
 }

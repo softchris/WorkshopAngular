@@ -52,6 +52,13 @@ app.config(['$routeProvider',
                     controller: routeEntry.controller
                 });
 
+            // 
+            $routeProvider.
+                when('/customers', {
+                    templateUrl: 'partials/customers.html',
+                    controller: 'customersController'
+                });
+
             $routeProvider.otherwise({
                 redirectTo: routes.start.route
             });

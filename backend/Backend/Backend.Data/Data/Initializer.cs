@@ -12,9 +12,14 @@ namespace Backend.Data.Data
     {
         protected override void Seed(WorkshopContext context)
         {
-            context.Products.Add(new Product { Name = "test" });
+            context.Products.Add(new Product { Name = "Elvis Presley - Greatest Hits", ProductType = new ProductType { Name ="Music" } });
 
-            context.Customers.Add(new Customer { BillingAddress = "Torpgatan 2 111 12 Malung", Firstname = "Nils", Lastname = "Persson", IsPremium = false, LastLoggedIn = DateTime.Now });
+            var cust = new Customer { BillingAddress = "Torpgatan 2 111 12 Malung", Firstname = "Nils", Lastname = "Persson", IsPremium = false, LastLoggedIn = DateTime.Now };
+
+            context.Customers.Add(cust);
+            context.Orders.Add(new Order { Created = DateTime.Now, Customer = cust });
+
+            context.SaveChanges();
 
             base.Seed(context);
         }

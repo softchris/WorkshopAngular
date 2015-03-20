@@ -1,4 +1,4 @@
-var controllers = angular.module('controllers');
+var controllers = controllers || angular.module('controllers');
 
 controllers.controller('productCreateCtrl',function($scope, productSrv, $routeParams, $location){
     $scope.create = function(){

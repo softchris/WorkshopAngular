@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="span4">
+        <label id="customer">Customer</label>
+        <input type="text" id="customer" />
+    </div>
+    <div class="span4">
+        <label id="supplier">Customer</label>
+        <input type="text" id="supplier" />
+    </div>
+    <div class="span4">
+        <label id="bookingnr">Customer</label>
+        <input type="text" id="bookingnr" />
+    </div>
+</div>
+        <br/>
+
+<pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>
+
+<div class="row">
+    <div class="span12">
+
+    [ <a href="" ng-click="predicate=''">unsorted</a> ]
+    <table class="table table-striped">
+        <tr>
+        <tr>
+            <th><a href="" ng-click="predicate = 'BookingNr'; reverse=!reverse">BokningsNr</a>
+                </th>
+        <th><a href="" ng-click="predicate = 'From'; reverse=!reverse">Från</a>
+            </th>
+        <th><a href="" ng-click="predicate = 'To'; reverse=!reverse">Till</a>
+            </th>
+        <th><a href="" ng-click="predicate = 'Overbooked'; reverse=!reverse">Överbokad</a>
+            </th>
+        <th><a href="" ng-click="predicate = 'Supplier.Name'; reverse=!reverse">Leverantör</a>
+            </th>
+        </tr>
+        </tr>
+        <tr ng-repeat="booking in bookings | orderBy:predicate:reverse">
+            <td>
+              {{booking.BookingNr}}
+            </td>
+            <td>
+                {{booking.From}}
+            </td>
+            <td>
+                {{booking.To}}
+            </td>
+            <td>
+                {{booking.Overbooked}}
+            </td>
+            <td>
+                {{booking.Supplier.Name}}
+            </td>
+        </tr>
+    </table>
+    </div>
+</div>

@@ -9,7 +9,7 @@
         <div class="navbar ">
             <div class="navbar-inner">
                 <div class="container">
-                    <ul class="nav">
+                    <ul class="nav navbar-nav">
                         <li>
                             <a href="/#products">Products</a>
                         </li>
@@ -19,9 +19,25 @@
                         <li>
                             <a href="/#cart">Cart</a>
                         </li>
+                        <li>
+                            <a href="/#customers">Customers</a>
+                        </li>
+                        <li>
+                            <a href="/#bookings">bokningar</a>
+                        </li>
+                        <li>
+                            <a href="/#login">Logga in</a>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </div>
+        <div style="position: absolute; float: right; top: 0; right: 5px; width: 250px" ng-controller="appCtrl">
+            returnUrl : {{appSrv.returnUrl}}
+            {{getStatus()}}
+            <span ng-class="appSrv.user == null ? 'invisible':''">
+                <button class="btn" ng-click="logout()">Logga ut</button>
+            </span>
         </div>
 
         <div ng-view style="margin: 3%">
@@ -32,12 +48,16 @@
         <script src="lib/angular-route.js"></script>
 
         <script src="app.js"></script>
+        <script src="controllers/bookingCtrl.js"></script>
         <script src="controllers/productCtrl.js"></script>
+        <script src="controllers/customerCtrl.js"></script>
         <script src="controllers/startCtrl.js"></script>
         <script src="controllers/productEditCtrl.js"></script>
         <script src="controllers/productCreateCtrl.js"></script>
         <script src="controllers/cartCtrl.js"></script>
-
+        <script src="controllers/appCtrl.js"></script>
+        <script src="controllers/loginCtrl.js"></script>
+        <script src="services/customerSrv.js"></script>
         <script src="services/productSrv.js"></script>
         <script src="services/appSrv.js"></script>
     </body>

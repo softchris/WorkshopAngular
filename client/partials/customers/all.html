@@ -1,0 +1,16 @@
+<div style="float: right"><a href="/#customerCreate">Create new</a> </div>
+
+<h3>Filter</h3>
+<input type="text" ng-model="filterCustomer" />
+
+<div ng-repeat="customer in customers | filter:filterCustomer" style="border-bottom: solid 1px #d3d3d3; margin:2%; padding: 3%">
+    <h4>{{customer.Firstname}}</h4>
+    <p style="font-size: small; color: #808080;">
+        {{customer.BillingAddress}}
+    </p>
+    <a href="/#customers/{{customer.Id}}">
+        Detail
+    </a> |
+    <a href="/#customerEdit/{{customer.Id}}">Edit</a> |
+    <a ng-click="delete(customer.Id)">Delete</a>
+</div>

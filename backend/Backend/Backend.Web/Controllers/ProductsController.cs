@@ -18,9 +18,9 @@ namespace Backend.Web.Controllers
 
         public IEnumerable<ProductModel> Get() 
         {
-            return _service.Get().Select( p=> Mapper.Map<ProductModel>(p) );
+            return _service.GetEagerProducts().Select( p=> Mapper.Map<ProductModel>(p) );
         }
-
+        
         public ProductModel Get(int id)
         {
             return Mapper.Map<ProductModel>( _service.Get(id));

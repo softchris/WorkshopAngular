@@ -13,5 +13,6 @@ namespace Backend.Domain
         public string BillingAddress { get; set; }
         public bool IsPremium { get; set; }
         public DateTime ? LastLoggedIn { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
